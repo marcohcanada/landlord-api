@@ -227,9 +227,9 @@ app.delete("/api/items/:item_name", (req,res) => {
     //res.status(501).send("Not implemented")  
 
     // @TODO:
-    // 1. Get the id of the item you want to delete from the request params
-    // 2. Send the id to the database
-    // - Use the mongoose Item.findByIdAndDelete
+    // 1. Get the name of the item you want to delete from the request params
+    // 2. Send the name to the database
+    // - Use the mongoose Item.findByOneAndDelete
     Item.findOneAndDelete({name: req.params.item_name}).exec().then(
          (deletedItem) => {
              if (deletedItem === null) {           
