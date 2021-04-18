@@ -229,7 +229,7 @@ app.delete("/api/items/:item_name", (req,res) => {
     // @TODO:
     // 1. Get the name of the item you want to delete from the request params
     // 2. Send the name to the database
-    // - Use the mongoose Item.findByOneAndDelete
+    // - Use the mongoose Item.findOneAndDelete
     Item.findOneAndDelete({name: req.params.item_name}).exec().then(
          (deletedItem) => {
              if (deletedItem === null) {           
