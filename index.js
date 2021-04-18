@@ -222,7 +222,7 @@ app.put("/api/items/:item_id", (req,res) => {
     
 })
 
-// DELETE BY ID
+// DELETE BY NAME
 app.delete("/api/items/:item_name", (req,res) => {
     //res.status(501).send("Not implemented")  
 
